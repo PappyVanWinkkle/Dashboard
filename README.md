@@ -1,24 +1,16 @@
-# README
+# Dashboard Application 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> A simple Rails 5 Application which allows users to create their own portfolio 
 
-Things you may want to cover:
+### Features 
+ - Real time engine for comments 
+ - Blog 
+ - Portfolio 
+ - Drag and drop interface 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ ### Code Example 
+ ```ruby 
+ def my_app
+   puts 'Welcome to the app'
+ end
+ ```
