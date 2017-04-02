@@ -4,6 +4,6 @@
    <p><%= portfolio.title %></p>
    <p><%= portfolio.subTitle %></p>
    <p><%= portfolio.body%></p>
-   <%= image_tag portfolio.thumb_image%>
+   <%= image_tag portfolio.thumb_image unless portfolio.thumb_image.nil?%>
    <p><%= portfolio.text%></p>
 <% end %>
