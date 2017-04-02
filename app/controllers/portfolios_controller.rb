@@ -38,5 +38,14 @@ def show
 	@portfolio = Portfolio.find(params[:id])
 end  
 
+def destroy 
+	@portfolio = Portfolio.find(params[:id])
+	@portfolio.destroy
+	respond_to do |format|
+	format.html { redirect_to portfolios_url, notice: "Just deleted your portfolio"}
+	end 
+end	
+
+
 
 end    
