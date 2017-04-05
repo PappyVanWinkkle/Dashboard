@@ -20,7 +20,13 @@ ActiveRecord::Schema.define(version: 20170404154548) do
     t.text     "body"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+<<<<<<< HEAD
     t.integer  "status",     default: 0
+=======
+    t.string   "slug"
+    t.integer  "status",     default: 0
+    t.index ["slug"], name: "index_blogs_on_slug", unique: true, using: :btree
+>>>>>>> f40f8af388e636f9153424290d92ccc7b91ac9ad
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
