@@ -1,7 +1,7 @@
 class PortfoliosController < ApplicationController
 	# Index action
 	def index 
-		@portfolio = Portfolio.all 
+		@portfolio = Portfolio.all
 	end 
     # New action 
 	def new 
@@ -37,6 +37,8 @@ end
 def show 
 	@portfolio = Portfolio.find(params[:id])
 end  
+
+
 
 def destroy 
 	@portfolio = Portfolio.find(params[:id])

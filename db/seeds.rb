@@ -1,4 +1,11 @@
 # Sample data for the app 
+3.times do |topic|
+   Topic.create!(title: "Topic #{topic}")
+end
+
+puts "Your topic was created "
+
+
 10.times do |blog|
 	Blog.create!(
          title: "My blog post #{blog}",
@@ -8,7 +15,8 @@
           Spare ribs short ribs short loin landjaeger, bacon brisket prosciutto kevin jerky. 
           Picanha flank ham hock shoulder jowl, boudin brisket meatball ribeye fatback filet mignon.
            Bacon pork chop turducken 
-         ham hock, doner turkey strip steak meatball jerky."
+         ham hock, doner turkey strip steak meatball jerky.", 
+         topic_id: Topic.last.id
 		)
 end 
 
@@ -23,10 +31,10 @@ end
 
 puts "5 Skills have now been created"
 
-9.times do |portfolio| 
+8.times do |portfolio| 
 	Portfolio.create!(
        title: "My title #{portfolio}",
-       subTitle: "Another title",
+       subTitle: "Ruby on Rails development",
        body:     "Doner short loin kevin pork meatball brisket tri-tip.
                   Ham flank picanha kevin meatball shoulder alcatra 
                   ribeye burgdoggen jerky. Turkey pig short ribs doner bacon shoulder. 
@@ -40,4 +48,22 @@ puts "5 Skills have now been created"
 		)
 end 
 
-puts "Created 9 portfolio items on the page "
+puts "Created 8 portfolio items on the page "
+
+1.times do |portfolio| 
+  Portfolio.create!(
+       title: "My title #{portfolio}",
+       subTitle: "Web Development with Golang and Google",
+       body:     "Doner short loin kevin pork meatball brisket tri-tip.
+                  Ham flank picanha kevin meatball shoulder alcatra 
+                  ribeye burgdoggen jerky. Turkey pig short ribs doner bacon shoulder. 
+                  Spare ribs short ribs short",
+
+       mainImage: "http://placehold.it/600x400",
+       thumb_image: "http://placehold.it/350x200" ,
+       
+       text: "My text image"                 
+
+    )
+end 
+puts "You should just created one blog"
