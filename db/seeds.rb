@@ -67,3 +67,13 @@ puts "Created 8 portfolio items on the page "
     )
 end 
 puts "You should just created one blog"
+
+3.times do |technology|
+  Technology.create!(
+     name: "Technology #{technology}", 
+     portfolio_id: Portfolio.last.id
+    )
+end 
+
+
+puts "You should just created some tech"
