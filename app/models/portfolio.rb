@@ -1,6 +1,8 @@
 class Portfolio < ApplicationRecord
-	include Placeholder
 	has_many :technologies 
+	accepts_nested_attributes_for :technologies, reject_if: lambda { |attr| attr['name'].blank?}
+
+	include:Placeholder
 	validates_presence_of :title, :subTitle, :body, :mainImage, :thumb_image
 	def self.angular
     	where(subTitle: "Ruby on Rails development")
