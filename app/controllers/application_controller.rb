@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
   def set_source 
   	session[:source] = params[:q] if params[:q]
   end 
-end
+
+  def current_user 
+  	super || OpenStruct.new(name: "Guest User", first_name:
+  	                            "Guest", last_name: "User")
+  end
+ end
