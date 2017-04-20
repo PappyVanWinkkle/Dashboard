@@ -11,7 +11,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    @page_title = @blog.title 
+    @page_title = @blog.title
   end
 
   # GET /blogs/new
@@ -70,7 +70,7 @@ class BlogsController < ApplicationController
        @blog.draft!
     end
     redirect_to blogs_url, notice: 'Your blog was updated'
-  end 
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
